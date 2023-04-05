@@ -3,7 +3,8 @@
  * pop_listint - deletes the head node of a list
  * @head: pointer to list
  */
- int pop_listint(list_t **head)
+
+int pop_listint(list_t **head)
 {
 	listint_t *temp;
 	int n;
