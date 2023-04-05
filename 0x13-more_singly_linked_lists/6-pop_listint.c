@@ -4,18 +4,20 @@
  * @head: pointer to list
  */
 
-int pop_listint(list_t **head)
+int pop_listint(listint_t **head)
 {
-	listint_t *temp;
+	listint_t *main_head;
 	int n;
 
-	temp = *head;
+	main_head = *head;
 
-	if (temp == NULL)
+	if (*head == NULL)
+	{
 		return (0);
-	*head = temp->next;
+	}
+	n = (*head)->n;
+	(*head) = (*head)->next;
+	free(main_head);
 
-	n = temp->;
-	free(temp);
 	return (n);
 }
