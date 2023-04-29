@@ -1,5 +1,6 @@
 #include "main.h"
 
+int str_len(char *str);
 /**
  * binary_to_uint - convert binary to decimal
  * @b: binary string
