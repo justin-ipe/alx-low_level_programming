@@ -13,7 +13,7 @@ unsigned int binary_to_uint(const char *b)
 	unsigned int j = 1;
 	int len;
 
-	len = strlen(b) - 1;
+	len = str_len(b) - 1;
 	while (len >= 0)
 	{
 		if (b[len] == '1')
