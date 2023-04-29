@@ -11,7 +11,7 @@ void print_binary(unsigned long int n)
 	unsigned long int i;
 	unsigned long int j = 0;
 	int k;
-	
+
 	k = sizeof(n) * 8 - 1;
 
 	while (k >= 0)
