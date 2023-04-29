@@ -1,5 +1,6 @@
 #include "main.h"
 
+int str_len(char *str);
 /**
  * create_file - creates a file
  * @filename: name file to create
@@ -7,8 +8,6 @@
  *
  * Return: 1 on Success, -1 on Failure
  */
-
-int str_len(char *str);
 
 int create_file(const char *filename, char *text_content)
 {
@@ -23,13 +22,13 @@ int create_file(const char *filename, char *text_content)
 
 	if (text_content)
 		write(i, text_content, str_len(text_content));
-	
+
 	return (1);
 }
 
 /**
 * str_len - Finds the length of a string
-* @str: string length of is found
+* @str: String length of is found
 *
 * Return: length of the @str
 */
@@ -37,6 +36,7 @@ int create_file(const char *filename, char *text_content)
 int str_len(char *str)
 {
 	int l = 0;
+
 	while (str[l] != '\0')
 		l++;
 	return (l);
