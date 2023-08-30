@@ -1,3 +1,7 @@
 #!/bin/bash
-gcc -c -fPIC *.c
-gcc -shared *.o -o liball.so
+
+for file in *.c; do
+gcc -fPIC -c "$file"
+done
+gcc -shared -o liball.so *.o
+rm *.o
